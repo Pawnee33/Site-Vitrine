@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Switzerland";
+    src: url("./assets/fonts/Switzerland.ttf") format("truetype");
+}
+
+@theme {
+    --font-display: "Switzerland", sans-serif;
+    --font-cursive: "Great Vibes", cursive;
+    --font-yesteryear: "Yesteryer", normal;
+    --color-nuit: oklch(08.2% 0.085 267.935);
+}
