@@ -1,12 +1,23 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 
 function Header() {
   const [menuOuvert, setMenuOuvert] = useState(false)
+  const [aspectScrolle, setAspectScrolle] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setAspectScrolle(window.scrollY > window.innerHeight - 80)
+    }
+    window.addEventListener("scroll", handleScroll)
+
+    return () => window.removeEventListener("scroll", handleScroll)  // ← le nettoyage
+  }, [])
+
     return(
-        <header className="top-0 left-0 w-full fixed bg-nuit py-3 px-6 z-50">
+        <header className={`top-0 left-0 w-full fixed py-3 px-6 z-50 transition ${aspectScrolle ? "bg-nuit" : "bg-transparent"}`}>
           <div className="flex justify-between items-center">
-            <span className="text-4xl font-cursive text-white mt-2">Pauline Martos</span>
+            <span className="text-4xl font-cursive text-white mt-2">Pauline Defize</span>
 
             {menuOuvert &&(
               <ul className="flex gap-6 text-white text-2xl font-yesteryear">
@@ -24,7 +35,7 @@ function Header() {
               onClick={() => setMenuOuvert(!menuOuvert)}
               className="hover:scale-115 transition"
             >
-              {menuOuvert ? <X color="White" /> : <Menu color="white"/>}
+              {menuOuvert ? <X color="white" /> : <Menu color="white"/>}
             </button>
           </div>
         </header>
