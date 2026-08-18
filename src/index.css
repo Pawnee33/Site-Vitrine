@@ -8,6 +8,11 @@
 @theme {
     --font-display: "Switzerland", sans-serif;
     --font-cursive: "Great Vibes", cursive;
-    --font-yesteryear: "Yesteryer", normal;
+    --font-yesteryear: "Yesteryear", cursive;
+    --font-titre: "Kaushan Script", cursive;
+    --font-name: "Grey Qo", cursive;
+    --font-subtitle: "Stack Sans Text", sans-serif;
+    --font-subtitle2: "Roboto", sans-serif;
+    --font-subtitle3: "Playfair Display SC", sans-serif;
     --color-nuit: oklch(08.2% 0.085 267.935);
 }

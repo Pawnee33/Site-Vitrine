@@ -20,7 +20,7 @@ function Header() {
             <span className="text-4xl font-cursive text-white mt-2">Pauline Defize</span>
 
             {menuOuvert &&(
-              <ul className="flex gap-6 text-white text-2xl font-yesteryear">
+              <ul className="flex gap-6 text-white text-2xl font-subtitle font-semiboldbold">
                 <li className="hover:scale-110 transition"><a href="#home">Home</a></li>
                 <li className="hover:scale-110 transition"><a href="#about">About</a></li>
                 <li className="hover:scale-110 transition"><a href="#musiques">Musiques</a></li>
