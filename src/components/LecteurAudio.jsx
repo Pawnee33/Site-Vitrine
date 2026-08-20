@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import ensemble from "../assets/audio/01-ensemble.mp3"
 import verite from "../assets/audio/03-verite.mp3"
 import neige_eternelle from "../assets/audio/Neige-eternelle-4.mp3"
@@ -19,10 +19,22 @@ function LecteurAudio() {
   ]
 
   const [indexStart, setIndexStart] = useState(0)
+  const audioRef = useRef(null)
+  const [enLecture, setEnLecture] = useState(false)
 
     return(
       <div className="bottom-0 left-0 w-full fixed">
-        <audio controls src={playlist[indexStart].fichier} />
+        <audio ref={audioRef} src={playlist[indexStart].fichier} />
+        <button onClick={() => {
+          if (enLecture) {
+            audioRef.current.pause()
+          } else {
+            audioRef.current.play()
+          }
+          setEnLecture(!enLecture)
+        }}>
+          {enLecture ? "Pause" : "Play"}
+        </button>
         <button onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}>Précédent</button>
         <button onClick={() => setIndexStart((indexStart + 1) % playlist.length)}>Suivant</button>
         <p>{playlist[indexStart].titre}</p>
