@@ -24,7 +24,7 @@ function LecteurAudio() {
       <div className="bottom-0 left-0 w-full fixed">
         <audio controls src={playlist[indexStart].fichier} />
         <button onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}>Précédent</button>
-        <button onClick={() => setIndexStart((indexStart + 1) %playlist.length)}>Suivant</button>
+        <button onClick={() => setIndexStart((indexStart + 1) % playlist.length)}>Suivant</button>
         <p>{playlist[indexStart].titre}</p>
       </div>
     )
