@@ -6,6 +6,8 @@ import ombre_lumiere from "../assets/audio/Ombre-et-Lumiere-MIX03.mp3"
 import opus_100 from "../assets/audio/opus-n100-02.mp3"
 import voir_en_soi from "../assets/audio/Pauline-Martos-02-Voir-en-soi.mp3"
 import croire from "../assets/audio/Projet-Croire-02.mp3"
+import pochette_album from "../assets/images/Pauline_hero.jpg"
+import { SkipBack, SkipForward, Play, Pause } from "lucide-react"
 
 function LecteurAudio() {
   const playlist = [
@@ -23,21 +25,24 @@ function LecteurAudio() {
   const [enLecture, setEnLecture] = useState(false)
 
     return(
-      <div className="bottom-0 left-0 w-full fixed">
-        <audio ref={audioRef} src={playlist[indexStart].fichier} />
-        <button onClick={() => {
-          if (enLecture) {
-            audioRef.current.pause()
-          } else {
-            audioRef.current.play()
-          }
-          setEnLecture(!enLecture)
-        }}>
-          {enLecture ? "Pause" : "Play"}
-        </button>
-        <button onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}>Précédent</button>
-        <button onClick={() => setIndexStart((indexStart + 1) % playlist.length)}>Suivant</button>
-        <p>{playlist[indexStart].titre}</p>
+      <div className="bottom-0 left-0 w-full fixed bg-nuit border-white border-t-4">
+        <div className="flex flex-row m-2 gap-4">
+          <audio ref={audioRef} src={playlist[indexStart].fichier} />
+          <img className="aspect-square object-cover w-20" src={pochette_album} alt="Pauline au piano album" />
+          <p className="text-white text-2xl font-musique2 font-semibold py-6.5 px-3">{playlist[indexStart].titre}</p>
+          <button className="text-white" onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}><SkipBack fill="white" color="white" size={32}/></button>
+          <button className="text-white" onClick={() => {
+            if (enLecture) {
+              audioRef.current.pause()
+            } else {
+              audioRef.current.play()
+            }
+            setEnLecture(!enLecture)
+          }}>
+            {enLecture ? <Pause fill="white" color="white" size={36}/> : <Play fill="white" color="white" size={36}/>}
+          </button>
+          <button onClick={() => setIndexStart((indexStart + 1) % playlist.length)}><SkipForward fill="white" color="white" size={32}/></button>
+        </div>
       </div>
     )
 }
