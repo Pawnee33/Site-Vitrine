@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"
+import { useState } from "react"
 import ensemble from "../assets/audio/01-ensemble.mp3"
 import verite from "../assets/audio/03-verite.mp3"
 import neige_eternelle from "../assets/audio/Neige-eternelle-4.mp3"
@@ -8,6 +8,7 @@ import voir_en_soi from "../assets/audio/Pauline-Martos-02-Voir-en-soi.mp3"
 import croire from "../assets/audio/Projet-Croire-02.mp3"
 import pochette_album from "../assets/images/Pauline_hero.jpg"
 import { SkipBack, SkipForward, Play, Pause } from "lucide-react"
+import WavesurferPlayer from "@wavesurfer/react"
 
 function LecteurAudio() {
   const playlist = [
@@ -21,27 +22,34 @@ function LecteurAudio() {
   ]
 
   const [indexStart, setIndexStart] = useState(0)
-  const audioRef = useRef(null)
   const [enLecture, setEnLecture] = useState(false)
+  const [wavesurfer, setWavesurfer] = useState(null)
 
     return(
       <div className="bottom-0 left-0 w-full fixed bg-nuit border-white border-t-4">
-        <div className="flex flex-row m-2 gap-4">
-          <audio ref={audioRef} src={playlist[indexStart].fichier} />
-          <img className="aspect-square object-cover w-20" src={pochette_album} alt="Pauline au piano album" />
-          <p className="text-white text-2xl font-musique2 font-semibold py-6.5 px-3">{playlist[indexStart].titre}</p>
-          <button className="text-white" onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}><SkipBack fill="white" color="white" size={32}/></button>
-          <button className="text-white" onClick={() => {
-            if (enLecture) {
-              audioRef.current.pause()
-            } else {
-              audioRef.current.play()
-            }
-            setEnLecture(!enLecture)
-          }}>
-            {enLecture ? <Pause fill="white" color="white" size={36}/> : <Play fill="white" color="white" size={36}/>}
-          </button>
-          <button onClick={() => setIndexStart((indexStart + 1) % playlist.length)}><SkipForward fill="white" color="white" size={32}/></button>
+        <div className="flex flex-row justify-between items-center m-2 gap-4">
+          <div className="flex-1 flex items-center gap-4">
+            <img className="aspect-square object-cover w-20" src={pochette_album} alt="Pauline au piano album" />
+            <p className="text-white text-2xl font-musique2 font-semibold w-64 truncate px-3">{playlist[indexStart].titre}</p>
+          </div>
+          <div className="flex items-center gap-4">
+            <button className="text-white" onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}><SkipBack fill="white" color="white" size={32}/></button>
+            <button className="text-white" onClick={() => wavesurfer && wavesurfer.playPause()}>
+              {enLecture ? <Pause fill="white" color="white" size={36}/> : <Play fill="white" color="white" size={36}/>}
+            </button>
+            <button onClick={() => setIndexStart((indexStart + 1) % playlist.length)}><SkipForward fill="white" color="white" size={32}/></button>
+          </div>
+          <div className="flex-1">
+            <WavesurferPlayer
+              height={60}
+              waveColor="#888888"
+              progressColor="#ffffff"
+              url={playlist[indexStart].fichier}
+              onReady={(ws) => setWavesurfer(ws)}
+              onPlay={() => setEnLecture(true)}
+              onPause={() => setEnLecture(false)}
+            />
+          </div>
         </div>
       </div>
     )
