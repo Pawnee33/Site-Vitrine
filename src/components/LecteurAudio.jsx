@@ -49,7 +49,10 @@ function LecteurAudio() {
         <div className={`flex flex-row items-center m-2 gap-4 ${afficheLecteur ? "" : "hidden"}`}>
           <div className="flex items-center gap-4">
             <img className="aspect-square object-cover w-20" src={pochette_album} alt="Pauline au piano album" />
-            <p className="text-white text-2xl font-musique2 font-semibold w-64 truncate px-3">{playlist[indexStart].titre}</p>
+            <div className="flex flex-col">
+              <p className="text-white text-2xl font-musique2 font-semibold w-64 truncate px-3">Ombre & Lumière</p>
+              <p className="text-white/80 text-xl font-musique2 font-light w-64 truncate px-3">{playlist[indexStart].titre}</p>
+            </div>
           </div>
           <div className="flex items-center gap-4">
             <button className="text-white" onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}><SkipBack fill="white" color="white" size={32}/></button>

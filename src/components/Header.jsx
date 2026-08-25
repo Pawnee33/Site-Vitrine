@@ -17,7 +17,7 @@ function Header() {
     return(
         <header className={`top-0 left-0 w-full fixed py-3 px-6 z-50 transition ${aspectScrolle ? "bg-nuit" : "bg-transparent"}`}>
           <div className="flex justify-between items-center">
-            <span className="text-4xl font-cursive text-white mt-2">Pauline Defize</span>
+            <span className="text-4xl font-cursive text-white mt-2">Pauline Defize Martos</span>
 
             {menuOuvert &&(
               <ul className="flex gap-6 text-white text-2xl font-subtitle font-semiboldbold">
