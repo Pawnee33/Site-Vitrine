@@ -46,53 +46,51 @@ function LecteurAudio() {
           </button>
         </div>
 
-        {afficheLecteur && (
-          <div className="flex flex-row items-center m-2 gap-4">
-            <div className="flex items-center gap-4">
-              <img className="aspect-square object-cover w-20" src={pochette_album} alt="Pauline au piano album" />
-              <p className="text-white text-2xl font-musique2 font-semibold w-64 truncate px-3">{playlist[indexStart].titre}</p>
-            </div>
-            <div className="flex items-center gap-4">
-              <button className="text-white" onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}><SkipBack fill="white" color="white" size={32}/></button>
-              <button className="text-white" onClick={() => wavesurfer && wavesurfer.playPause()}>
-                {enLecture ? <Pause fill="white" color="white" size={36}/> : <Play fill="white" color="white" size={36}/>}
-              </button>
-              <button onClick={() => setIndexStart((indexStart + 1) % playlist.length)}><SkipForward fill="white" color="white" size={32}/></button>
-            </div>
-            <div className="flex-1">
-              <WavesurferPlayer
-                height={60}
-                waveColor="#888888"
-                progressColor="#ffffff"
-                url={playlist[indexStart].fichier}
-                onReady={(ws) => {
-                  setWavesurfer(ws)
-                  setDuree(ws.getDuration())
-                }}
-                onPlay={() => setEnLecture(true)}
-                onPause={() => setEnLecture(false)}
-                onFinish={() => setIndexStart((indexStart + 1) % playlist.length)}
-                autoplay={true}
-                onTimeupdate={(ws) => setTempsActuel(ws.getCurrentTime())}
-              />
-            </div>
-            <p className="text-white">{formatTemps(tempsActuel)}</p>
-            <button
-              className="text-white"
-              onClick={() => {
-                if (!wavesurfer) return
-                if (estMuet) {
-                  wavesurfer.setVolume(1)
-                } else {
-                  wavesurfer.setVolume(0)
-                }
-                setEstMuet(!estMuet)
-              }}
-            >
-              {estMuet ? <VolumeX color="white" size={28} /> : <Volume2 color="white" size={28} />}
-            </button>
+        <div className={`flex flex-row items-center m-2 gap-4 ${afficheLecteur ? "" : "hidden"}`}>
+          <div className="flex items-center gap-4">
+            <img className="aspect-square object-cover w-20" src={pochette_album} alt="Pauline au piano album" />
+            <p className="text-white text-2xl font-musique2 font-semibold w-64 truncate px-3">{playlist[indexStart].titre}</p>
           </div>
-        )}
+          <div className="flex items-center gap-4">
+            <button className="text-white" onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}><SkipBack fill="white" color="white" size={32}/></button>
+            <button className="text-white" onClick={() => wavesurfer && wavesurfer.playPause()}>
+              {enLecture ? <Pause fill="white" color="white" size={36}/> : <Play fill="white" color="white" size={36}/>}
+            </button>
+            <button onClick={() => setIndexStart((indexStart + 1) % playlist.length)}><SkipForward fill="white" color="white" size={32}/></button>
+          </div>
+          <div className="flex-1">
+            <WavesurferPlayer
+              height={60}
+              waveColor="#888888"
+              progressColor="#ffffff"
+              url={playlist[indexStart].fichier}
+              onReady={(ws) => {
+                setWavesurfer(ws)
+                setDuree(ws.getDuration())
+              }}
+              onPlay={() => setEnLecture(true)}
+              onPause={() => setEnLecture(false)}
+              onFinish={() => setIndexStart((indexStart + 1) % playlist.length)}
+              autoplay={true}
+              onTimeupdate={(ws) => setTempsActuel(ws.getCurrentTime())}
+            />
+          </div>
+          <p className="text-white">{formatTemps(tempsActuel)}</p>
+          <button
+            className="text-white"
+            onClick={() => {
+              if (!wavesurfer) return
+              if (estMuet) {
+                wavesurfer.setVolume(1)
+              } else {
+                wavesurfer.setVolume(0)
+              }
+              setEstMuet(!estMuet)
+            }}
+          >
+            {estMuet ? <VolumeX color="white" size={28} /> : <Volume2 color="white" size={28} />}
+          </button>
+        </div>
       </div>
     )
 }
