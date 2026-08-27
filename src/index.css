@@ -17,4 +17,5 @@
     --font-musique: "Alfa Slab One", sans-serif;
     --font-musique2: "Playfair", sans-serif;
     --color-nuit: oklch(08.2% 0.085 267.935);
+    --color-ciel: oklch(93.8% 0.127 124.321);
 }

@@ -36,7 +36,7 @@ function LecteurAudio() {
   }
 
     return(
-      <div className="bottom-0 left-0 w-full fixed bg-nuit border-white border-t-4 relative">
+      <div className="bottom-0 left-0 w-full fixed bg-nuit border-white border-t-4 z-50">
         <div className="absolute bottom-full right-8">
           <button 
             onClick={() => setAfficheLecteur(!afficheLecteur)}
