@@ -37,6 +37,7 @@ function LecteurAudio() {
 
     return(
       <div className="bottom-0 left-0 w-full fixed bg-nuit border-white border-t-4 z-50">
+        {/* Chevron pour cacher le lecteur */}
         <div className="absolute bottom-full right-8">
           <button 
             onClick={() => setAfficheLecteur(!afficheLecteur)}
@@ -47,13 +48,19 @@ function LecteurAudio() {
         </div>
 
         <div className={`flex flex-row items-center m-2 gap-4 ${afficheLecteur ? "" : "hidden"}`}>
+
+          {/* pochette d'Album */}
           <div className="flex items-center gap-4">
             <img className="aspect-square object-cover w-20" src={pochette_album} alt="Pauline au piano album" />
+
+            {/* Titre de l'album et des musiques */}
             <div className="flex flex-col">
               <p className="text-white text-2xl font-musique2 font-semibold w-64 truncate px-3">Ombre & Lumière</p>
               <p className="text-white/80 text-xl font-musique2 font-light w-64 truncate px-3">{playlist[indexStart].titre}</p>
             </div>
           </div>
+
+          {/* Boutons Play, Pause, Précédent et suivant */}
           <div className="flex items-center gap-4">
             <button className="text-white" onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}><SkipBack fill="white" color="white" size={32}/></button>
             <button className="text-white" onClick={() => wavesurfer && wavesurfer.playPause()}>
@@ -61,6 +68,8 @@ function LecteurAudio() {
             </button>
             <button onClick={() => setIndexStart((indexStart + 1) % playlist.length)}><SkipForward fill="white" color="white" size={32}/></button>
           </div>
+
+          {/* Onde de la lecture audio avec WavesurferPlayer */}
           <div className="flex-1">
             <WavesurferPlayer
               height={60}
@@ -78,6 +87,8 @@ function LecteurAudio() {
               onTimeupdate={(ws) => setTempsActuel(ws.getCurrentTime())}
             />
           </div>
+
+          {/* Temps de l'audio et Volume */}
           <p className="text-white">{formatTemps(tempsActuel)}</p>
           <button
             className="text-white"

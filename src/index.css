@@ -5,7 +5,13 @@
     src: url("./assets/fonts/Switzerland.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "OpenSans";
+    src: url("./assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf")
+}
+
 @theme {
+    --font-lien: "OpenSans", sans-serif;
     --font-display: "Switzerland", sans-serif;
     --font-cursive: "Great Vibes", cursive;
     --font-yesteryear: "Yesteryear", cursive;
