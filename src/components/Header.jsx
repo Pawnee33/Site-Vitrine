@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
+import { Link, useLocation } from "react-router-dom"
 
 function Header() {
+  const location = useLocation()
+  const surAccueil = location.pathname === "/"
   const [menuOuvert, setMenuOuvert] = useState(false)
   const [aspectScrolle, setAspectScrolle] = useState(false)
 
@@ -15,7 +18,7 @@ function Header() {
   }, [])
 
     return(
-        <header className={`top-0 left-0 w-full fixed py-3 px-6 z-50 transition ${aspectScrolle ? "bg-nuit" : "bg-transparent"}`}>
+        <header className={`top-0 left-0 w-full fixed py-3 px-6 z-50 transition ${surAccueil && !aspectScrolle ? "bg-transparent" : "bg-nuit"}`}>
           {/* Nom de l'artiste à gauche */}
           <div className="flex justify-between items-center">
             <span className="text-4xl font-cursive text-white mt-2">Pauline Defize Martos</span>
@@ -23,13 +26,13 @@ function Header() {
             {menuOuvert &&(
               // Lien des pages
               <ul className="flex gap-6 text-white text-2xl font-subtitle font-semiboldbold">
-                <li className="hover:scale-110 transition"><a href="#home">ACCUEIL</a></li>
-                <li className="hover:scale-110 transition"><a href="#about">BIOGRAPHIE</a></li>
-                <li className="hover:scale-110 transition"><a href="#musiques">MUSIQUES</a></li>
-                <li className="hover:scale-110 transition"><a href="#videos">VIDÉOS</a></li>
-                <li className="hover:scale-110 transition"><a href="#concerts">CONCERTS</a></li>
-                <li className="hover:scale-110 transition"><a href="#cours">COURS</a></li>
-                <li className="hover:scale-110 transition"><a href="#contact">CONTACT</a></li>
+                <li className="hover:scale-110 transition"><Link to="/">ACCUEIL</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/biographie">BIOGRAPHIE</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/musiques">MUSIQUES</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/videos">VIDÉOS</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/concerts">CONCERTS</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/cours">COURS</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/contact">CONTACT</Link></li>
               </ul>
             )}
 
