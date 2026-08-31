@@ -29,7 +29,7 @@ function Header() {
                 <li className="hover:scale-110 transition"><a href="#videos">VIDÉOS</a></li>
                 <li className="hover:scale-110 transition"><a href="#concerts">CONCERTS</a></li>
                 <li className="hover:scale-110 transition"><a href="#cours">COURS</a></li>
-                <li className="hover:scale-110 transition"><a href="#contact">CONTATC</a></li>
+                <li className="hover:scale-110 transition"><a href="#contact">CONTACT</a></li>
               </ul>
             )}
 
