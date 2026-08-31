@@ -20,7 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cours" element={<Cours />} />
         <Route path="/musiques" element={<Musiques />} />
-        <Route path="/video" element={<Video />} />
+        <Route path="/videos" element={<Video />} />
       </Routes>
       <LecteurAudio />
     </BrowserRouter>
