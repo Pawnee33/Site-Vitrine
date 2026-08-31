@@ -25,19 +25,19 @@ function Footer() {
         <p className="text-xl font-lien font-bold">Suivez moi sur :</p>
         <div className="flex flex-row gap-6">
           <a href="https://www.youtube.com/@paulinedefizemartos" target="_blank" rel="noopener noreferrer">
-            <img className="aspect-square h-12 w-12 hover:scale-110 transition" src={Youtube}  alt="Logo Youtube" />
+            <img className="aspect-square h-12 w-12 hover:scale-115 transition" src={Youtube}  alt="Logo Youtube" />
           </a>
           <a href="https://www.deezer.com/fr/artist/293158931" target="_blank" rel="noopener noreferrer">
-            <img className="aspect-square h-12 w-12 hover:scale-110 transition" src={Deezer}  alt="Logo Deezer" />
+            <img className="aspect-square h-12 w-12 hover:scale-115 transition" src={Deezer}  alt="Logo Deezer" />
           </a>
           <a href="https://open.spotify.com/intl-fr/artist/5VccoAj507B6SvIsfc31Ue?si=JhGRPv3USp-MGNw8GiKr8g" target="_blank" rel="noopener noreferrer">
-            <img className="aspect-square h-12 w-12 hover:scale-110 transition" src={Spotify}  alt="Logo Spotify" />
+            <img className="aspect-square h-12 w-12 hover:scale-115 transition" src={Spotify}  alt="Logo Spotify" />
           </a>
           <a href="https://music.apple.com/fr/artist/pauline-martos/1784295595" target="_blank" rel="noopener noreferrer">
-            <img className="aspect-square h-12 w-12 hover:scale-110 transition" src={Apple}  alt="Logo Apple musique" />
+            <img className="aspect-square h-12 w-12 hover:scale-115 transition" src={Apple}  alt="Logo Apple musique" />
           </a>
           <a href="https://www.facebook.com/people/Pauline-Defize-Martos/pfbid0Ry5ebSikw3DstWHec33Ku8QFmrX6tyj9GfLimYXV26fa4KR8yS2DJqoZSqY7fknGl/?locale=fr_FR" target="_blank" rel="noopener noreferrer">
-            <img className="aspect-square h-12 w-12 hover:scale-110 transition" src={Facebook}  alt="Logo Facebook" />
+            <img className="aspect-square h-12 w-12 hover:scale-115 transition" src={Facebook}  alt="Logo Facebook" />
           </a>
         </div>
         <div>
