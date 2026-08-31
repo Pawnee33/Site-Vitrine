@@ -21,7 +21,9 @@ function Header() {
         <header className={`top-0 left-0 w-full fixed py-3 px-6 z-50 transition ${surAccueil && !aspectScrolle ? "bg-transparent" : "bg-nuit"}`}>
           {/* Nom de l'artiste à gauche */}
           <div className="flex justify-between items-center">
-            <span className="text-4xl font-cursive text-white mt-2">Pauline Defize Martos</span>
+            <Link to={"/"}>
+              <span className="text-4xl font-cursive text-white mt-2 hover:opacity-70">Pauline Defize Martos</span>
+            </Link>
 
             {menuOuvert &&(
               // Lien des pages

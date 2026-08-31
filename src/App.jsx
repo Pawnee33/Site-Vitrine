@@ -8,6 +8,7 @@ import Contact from "./components/pages/Contact"
 import Cours from "./components/pages/Cours"
 import Musiques from "./components/pages/Musiques"
 import Video from "./components/pages/Video"
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/musiques" element={<Musiques />} />
         <Route path="/videos" element={<Video />} />
       </Routes>
+      <Footer />
       <LecteurAudio />
     </BrowserRouter>
   )
