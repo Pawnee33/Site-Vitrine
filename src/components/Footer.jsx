@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 function Footer() {
   return(
-    <footer className="flex flex-row justify-between items-center bg-sky-50 py-12 text-black text-center gap-10 m-8 p-6 pb-32">
+    <footer className="flex flex-row justify-between items-center rounded-2xl bg-sky-50 py-12 text-black text-center gap-10 m-8 p-6 pb-32">
       <p className="text-4xl font-cursive text-black">Pauline Defize Martos</p>
       <div className="h-28 border-r border-black m-10"></div>
         <ul className="flex flex-row gap-6 items-center text-black text-xl text-left font-lien font-semibold">
