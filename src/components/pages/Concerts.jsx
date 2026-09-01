@@ -129,8 +129,11 @@ function Concerts() {
   ]
 
   return (
-    <section>
-      <h1 className="text-6xl text-blue-950 m-8">Concerts</h1>
+    <section className="pt-24">
+      <div className="flex flex-col m-6">
+        <h1 className="font-musique2 text-4xl">Événements à venir :</h1>
+        <p className="m-3">D’autres représentations à venir bientôt, restez à l’écoute !</p>
+      </div>
 
       <div className="m-6">
         <h2 className="font-musique2 text-4xl">Articles :</h2>
@@ -153,7 +156,7 @@ function Concerts() {
       </div>
 
       <div className="m-6">
-        <h2 className="font-musique2 text-4xl">Concerts :</h2>
+        <h2 className="font-musique2 text-4xl">Concerts passés :</h2>
       </div>
 
       <div className="flex flex-row flex-wrap justify-center gap-10">
