@@ -1,4 +1,4 @@
-import Pauline_hero from "../assets/images/Pauline_hero.jpg"
+import Pauline_hero from "../assets/images/Pauline_hero2.jpg"
 
 function Hero() {
     return(
