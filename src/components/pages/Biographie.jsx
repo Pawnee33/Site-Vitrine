@@ -1,10 +1,12 @@
+import useOnScreen from "../../hooks/useOnScreen"
 import Pauline_Bio from "../../assets/images/Pauline_Bio.jpg"
 
 function Biographie() {
+  const [ cardRef, cardVisible ] = useOnScreen()
   return (
     <section className="relative">
     <img className="w-full  object-contain" src={Pauline_Bio} alt="Pauline au piano" />
-    <div className="absolute top-80 left-32 bg-gray-400/30 rounded-2xl shadow-[-50px_50px_10px_rgba(0,0,0,0.40)] py-10 px-12">
+    <div className={`absolute top-80 left-32 bg-gray-400/30 rounded-2xl shadow-[-50px_50px_10px_rgba(0,0,0,0.40)] py-10 px-12 transition-all duration-700 ${cardVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-52"}`} ref={cardRef}>
     <div className="flex flex-col gap-6">
       <h1 className="text-5xl text-white  font-musique2">Biographie</h1>
       <div className="max-w-md flex flex-col gap-4 text-white text-xl font-lien">

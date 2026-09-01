@@ -27,7 +27,7 @@ function Header() {
 
             {menuOuvert &&(
               // Lien des pages
-              <ul className="flex gap-6 text-white text-2xl font-lien font-semibold">
+              <ul className="flex gap-6 text-white text-2xl font-subtitle2 font-light">
                 <li className="hover:scale-110 transition"><Link to="/">ACCUEIL</Link></li>
                 <li className="hover:scale-110 transition"><Link to="/biographie">BIOGRAPHIE</Link></li>
                 <li className="hover:scale-110 transition"><Link to="/musiques">MUSIQUES</Link></li>
