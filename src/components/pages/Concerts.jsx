@@ -3,6 +3,7 @@ import Article_2 from "../../assets/images/articles-piano-2.jpg"
 import Article_3 from "../../assets/images/articles-piano-3.jpg"
 import Article_4 from "../../assets/images/projet-artistique-1.jpg"
 import Article_5 from "../../assets/images/Tom-et-Pauline-concert.jpg"
+import Article_6 from "../../assets/images/Article_6.jpg"
 import Concert_1 from "../../assets/images/affiches-piano_2.jpg"
 import Concert_2 from "../../assets/images/affiche-20-Mai.jpg"
 import Concert_3 from "../../assets/images/concert_1.jpg"
@@ -48,6 +49,13 @@ function Concerts() {
     {
       id: 5,
       image: Article_5,
+      date: "15 août 2026",
+      titre: "Projet artistique",
+      extrait: "Une rencontre inédite entre le piano et d'autres disciplines artistiques.",
+    },
+    {
+      id: 6,
+      image: Article_6,
       date: "15 août 2026",
       titre: "Projet artistique",
       extrait: "Une rencontre inédite entre le piano et d'autres disciplines artistiques.",
