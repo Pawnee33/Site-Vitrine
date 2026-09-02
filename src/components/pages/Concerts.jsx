@@ -13,6 +13,7 @@ import Concert_6 from "../../assets/images/Pulsatile_Impromptu.jpg"
 import Concert_7 from "../../assets/images/Affiche002_L'impromptu_29_03_25.jpg"
 import Concert_8 from "../../assets/images/Affiche_L'impromptu_17_05_25.jpg"
 import Concert_9 from "../../assets/images/Affiche_Annecy.jpg"
+import Carrousel from "../Carrousel"
 
 
 
@@ -129,51 +130,15 @@ function Concerts() {
   ]
 
   return (
-    <section className="pt-24">
+    <section className="bg-amber-50/30 pt-24">
       <div className="flex flex-col m-6">
         <h1 className="font-musique2 text-4xl">Événements à venir :</h1>
         <p className="m-3">D’autres représentations à venir bientôt, restez à l’écoute !</p>
       </div>
 
-      <div className="m-6">
-        <h2 className="font-musique2 text-4xl">Articles :</h2>
-      </div>
+      <Carrousel titre="Articles :" items={articles} />
 
-      <div className="flex flex-row flex-wrap justify-center gap-10">
-        {articles.map((article) => (
-          <article
-            key={article.id}
-            className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col"
-          >
-            <img className="w-full" src={article.image} alt={article.titre} />
-            <div className="flex flex-col gap-2 p-5">
-              <p className="font-bold text-black">{article.date}</p>
-              <h2 className="text-xl font-bold text-blue-700">{article.titre}</h2>
-              <p className="text-gray-600">{article.extrait}</p>
-            </div>
-          </article>
-        ))}
-      </div>
-
-      <div className="m-6">
-        <h2 className="font-musique2 text-4xl">Concerts passés :</h2>
-      </div>
-
-      <div className="flex flex-row flex-wrap justify-center gap-10">
-        {concerts.map((concert) => (
-          <article
-            key={concert.id}
-            className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col"
-          >
-            <img className="w-full" src={concert.image} alt={concert.titre} />
-            <div className="flex flex-col gap-2 p-5">
-              <p className="font-bold text-black">{concert.date}</p>
-              <h2 className="text-xl font-bold text-blue-700">{concert.titre}</h2>
-              <p className="text-gray-600">{concert.extrait}</p>
-            </div>
-          </article>
-        ))}
-      </div>
+      <Carrousel titre="Concerts passés :" items={concerts} />
     </section>
   )
 }
