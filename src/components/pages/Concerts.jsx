@@ -4,11 +4,12 @@ import Article_3 from "../../assets/images/articles-piano-3.jpg"
 import Article_4 from "../../assets/images/projet-artistique-1.jpg"
 import Article_5 from "../../assets/images/Tom-et-Pauline-concert.jpg"
 import Article_6 from "../../assets/images/Article_6.jpg"
-import Concert_9 from "../../assets/images/affiches-piano_2.jpg"
-import Concert_8 from "../../assets/images/affiche-20-Mai.jpg"
-import Concert_7 from "../../assets/images/concert_1.jpg"
-import Concert_6 from "../../assets/images/concert-11-Juin.jpg"
-import Concert_5 from "../../assets/images/Affiche_pulsatile.png"
+import Concert_10 from "../../assets/images/affiches-piano_2.jpg"
+import Concert_9 from "../../assets/images/affiche-20-Mai.jpg"
+import Concert_8 from "../../assets/images/concert_1.jpg"
+import Concert_7 from "../../assets/images/concert-11-Juin.jpg"
+import Concert_6 from "../../assets/images/Affiche_pulsatile.png"
+import Concert_5 from "../../assets/images/Copie-de-rencontre.png"
 import Concert_4 from "../../assets/images/Pulsatile_Impromptu.jpg"
 import Concert_3 from "../../assets/images/Affiche002_L'impromptu_29_03_25.jpg"
 import Concert_2 from "../../assets/images/Affiche_L'impromptu_17_05_25.jpg"
@@ -22,44 +23,44 @@ function Concerts() {
     {
       id: 1,
       image: Article_1,
-      date: "26 août 2026",
-      titre: "Récital à Bordeaux",
-      extrait: "Une soirée entre ombre et lumière, où Pauline interprète ses compositions originales.",
+      date: "Décembre 2009 à Agen",
+      titre: "Récital solo",
+      extrait: "Un concert classique où vous sont proposées les oeuvres de Chopin, Liszt, Debussy et Granados.",
     },
     {
       id: 2,
       image: Article_2,
-      date: "24 août 2026",
-      titre: "Concert au conservatoire",
-      extrait: "Un programme mêlant grands classiques et créations personnelles.",
+      date: "17 mars 2013 à Lège Cap Ferret",
+      titre: "Concert Cap ferret Music Festival, Tournoi international de Musique",
+      extrait: "Concourt de piano.",
     },
     {
       id: 3,
       image: Article_3,
-      date: "20 août 2026",
-      titre: "Soirée piano-jazz",
-      extrait: "Pauline explore les frontières entre musique classique et improvisation jazz.",
+      date: "23 avril 2012 à Bassens",
+      titre: "Concert en trio et Oeuvres en solo avec Vincent Martos et Audrey Fernandez",
+      extrait: "Concert en après-midi aux Jardins d'Ombeline avec Bach, Mozart, Schubert, Fauré et Ravel.",
     },
     {
       id: 4,
       image: Article_4,
-      date: "15 août 2026",
-      titre: "Projet artistique",
-      extrait: "Une rencontre inédite entre le piano et d'autres disciplines artistiques.",
+      date: "7 novembre 2015 à Cenon",
+      titre: "Des Cordes en Metal",
+      extrait: "Pauline Martos, Compositrice pour un concert de métal symphonique avec le groupe Dunam et un Orchestre à cordes.",
     },
     {
       id: 5,
       image: Article_5,
-      date: "15 août 2026",
-      titre: "Projet artistique",
-      extrait: "Une rencontre inédite entre le piano et d'autres disciplines artistiques.",
+      date: "29 juillet 2017 à Gruissant",
+      titre: "Concert Pour Hautbois et Piano avec Tom Camus",
+      extrait: "Pièces pour Hautbois et Piano.",
     },
     {
       id: 6,
       image: Article_6,
-      date: "15 août 2026",
-      titre: "Projet artistique",
-      extrait: "Une rencontre inédite entre le piano et d'autres disciplines artistiques.",
+      date: "30 octobre 2020 à Bruges",
+      titre: "Pauline Martos, Professeur de piano à l'École de Musique Municipale de Bruges",
+      extrait: "Cours de piano, Nous gardons au maximum le contact avec les élèves.",
     },
   ]
 
@@ -123,6 +124,13 @@ function Concerts() {
     {
       id: 9,
       image: Concert_9,
+      date: "15 août 2026",
+      titre: "Projet artistique",
+      extrait: "Une rencontre inédite entre le piano et d'autres disciplines artistiques.",
+    },
+    {
+      id: 10,
+      image: Concert_10,
       date: "15 août 2026",
       titre: "Projet artistique",
       extrait: "Une rencontre inédite entre le piano et d'autres disciplines artistiques.",
