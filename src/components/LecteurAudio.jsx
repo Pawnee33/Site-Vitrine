@@ -6,6 +6,7 @@ import ombre_lumiere from "../assets/audio/Ombre-et-Lumiere-MIX03.mp3"
 import opus_100 from "../assets/audio/opus-n100-02.mp3"
 import voir_en_soi from "../assets/audio/Pauline-Martos-02-Voir-en-soi.mp3"
 import croire from "../assets/audio/Projet-Croire-02.mp3"
+import horizon from "../assets/audio/02-HORIZON.mp3"
 import pochette_album from "../assets/images/Pauline_hero.jpg"
 import { SkipBack, SkipForward, Play, Pause, Volume2, VolumeX, ChevronDown, ChevronUp } from "lucide-react"
 import WavesurferPlayer from "@wavesurfer/react"
@@ -19,6 +20,7 @@ function LecteurAudio() {
     { titre: "Opus 20 n°100", fichier: opus_100 },
     { titre: "Voir en soi", fichier: voir_en_soi },
     { titre: "Croire", fichier: croire },
+    { titre: "Horizon", fichier: horizon },
   ]
 
   const [indexStart, setIndexStart] = useState(0)
