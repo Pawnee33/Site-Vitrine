@@ -49,7 +49,7 @@ function Musiques() {
 
   return (
     <section 
-      className="bg-nuit/98 pt-36 pb-36">
+      className="bg-linear-to-b from-fond to-nuit pt-36 pb-36">
       <div className="flex flex-col justify-center items-center m-6">
         <h1 className="font-musique2 text-4xl text-white">Album : <span className="text-amber-400">{OmbreetLumiere.titre}</span></h1>
         <div className={`flex flex-row items-center bg-gray-900 w-max rounded-2xl shadow-amber-900 shadow-lg m-10 gap-6 transition-all duration-700 ${cardVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-52"}`} ref={cardRef}>
