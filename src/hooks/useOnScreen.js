@@ -12,7 +12,7 @@ function useOnScreen() {
 
   const callback = (entries) => {
     const [ entry ] = entries
-    setIsVisible(entry.isIntersecting)
+    if (entry.isIntersecting) setIsVisible(true)
   }
 
   useEffect(() => {
