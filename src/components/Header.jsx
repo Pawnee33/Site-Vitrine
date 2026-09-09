@@ -27,7 +27,7 @@ function Header() {
           {/* Nom de l'artiste à gauche */}
           <div className="flex justify-between items-center">
             <Link to={"/"}>
-              <span className="text-4xl font-cursive text-white mt-2 hover:opacity-70">Pauline Defize Martos</span>
+              <span className="text-xl lg:text-4xl font-cursive text-white mt-2 hover:opacity-70">Pauline Defize Martos</span>
             </Link>
 
             {menuOuvert &&(
