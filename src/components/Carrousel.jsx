@@ -18,11 +18,13 @@ function Carrousel({ titre, items }) {
         <h2 className="font-musique2 text-4xl">{titre}</h2>
       </div>
 
+      {/* Boutons de défilement gauche */}
       <div className="relative mx-16">
         <button onClick={defilerGauche} className="absolute left-10 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-lg p-4 hover:bg-gray-100 transition">
           <ChevronLeft size={50} />
         </button>
 
+        {/* Conteneur des éléments du carrousel */}
         <div ref={carrouselRef} className="flex flex-row overflow-x-auto gap-20 scrollbar-hide items-start m-10 p-10">
           {items.map((item) => (
             <article key={item.id} className="max-w-xs shrink-0 rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col">
@@ -36,6 +38,7 @@ function Carrousel({ titre, items }) {
           ))}
         </div>
 
+        {/* Boutons de défilement droite */}
         <button onClick={defilerDroite} className="absolute right-10 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-lg p-4 hover:bg-gray-100 transition">
           <ChevronRight size={50} />
         </button>

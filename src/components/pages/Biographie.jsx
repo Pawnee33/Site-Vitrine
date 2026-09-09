@@ -5,10 +5,12 @@ function Biographie() {
   const [ cardRef, cardVisible ] = useOnScreen()
   return (
     <section className="relative">
+      {/* Image de la biographie */}
     <img className="w-full h-full object-contain" src={Pauline_Bio} />
     <div className={`absolute top-30 left-16 bg-gray-400/30 rounded-2xl shadow-[-50px_50px_10px_rgba(0,0,0,0.40)] py-10 px-12 transition-all duration-700 ${cardVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-52"}`} ref={cardRef}>
     <div className="flex flex-col gap-6">
       <h1 className="text-5xl text-white  font-musique2">Biographie</h1>
+      {/* Card texte de la biographie */}
       <div className="max-w-5xl flex flex-col gap-4 text-white text-xl font-lien">
         <p>
           Pauline Defize Martos

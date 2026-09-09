@@ -3,7 +3,9 @@ function Contact() {
   return (
     <section>
       <div className="flex justify-center items-center rounded-2xl m-10 gap-6">
+        {/* Image de contact */}
         <img className="max-w-2xl m-20 rounded-2xl" src={Pauline_contact} alt="Pauline entrain de jouer au piano" />
+        {/* Card contact */}
         <div className="flex flex-col items-center gap-3 bg-white/80 rounded-2xl p-10">
           <p className="text-xl text-blue-950 font-subtitle font-bold">Entrer en contact</p>
           <a className="text-2xl font-titre hover:opacity-30 transition" href="mailto:paulinemartos@hotmail.fr">paulinemartos@hotmail.fr</a>

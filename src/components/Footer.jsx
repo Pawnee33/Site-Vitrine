@@ -8,7 +8,9 @@ import { Link } from "react-router-dom"
 function Footer() {
   return(
     <footer className="flex flex-row justify-between items-center rounded-2xl bg-sky-50 py-12 text-black text-center gap-10 m-8 p-6 pb-32">
+      {/* Nom de l'artiste */}
       <p className="text-4xl font-cursive text-black">Pauline Defize Martos</p>
+      {/* Menu de navigation */}
       <div className="h-28 border-r border-black m-10"></div>
         <ul className="flex flex-row gap-6 items-center text-black text-xl text-left font-lien font-semibold">
           <li className="hover:scale-110 transition"><Link to="/">ACCUEIL</Link></li>
@@ -23,6 +25,7 @@ function Footer() {
       <div className="h-28 border-r border-black m-10"></div>
       <div className="flex flex-col gap-10">
         <p className="text-xl font-lien font-bold">Suivez moi sur :</p>
+        {/* Logos des réseaux sociaux et lien des réseaux sociaux */}
         <div className="flex flex-row gap-6">
           <a href="https://www.youtube.com/@paulinedefizemartos" target="_blank" rel="noopener noreferrer">
             <img className="aspect-square h-12 w-12 hover:scale-115 transition" src={Youtube}  alt="Logo Youtube" />

@@ -19,6 +19,7 @@ function Video() {
         className={`grid grid-cols-2 gap-10 justify-center items-center m-20 px-72 transition-all duration-700 ${videoVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-24"}`}
         ref={videoRef}
       >
+        {/* Card des vidéos */}
         {videos.map((video) => (
           <div
             key={video.id}
@@ -38,6 +39,7 @@ function Video() {
         ))}
       </div>
 
+      {/* Modal pour afficher la vidéo */}
       {videoOuverte && (
         <div
           className="fixed inset-0 z-50 bg-black/80 flex flex-col justify-center items-center gap-4"
