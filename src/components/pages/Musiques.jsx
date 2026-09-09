@@ -23,7 +23,7 @@ function Musiques() {
     image: pochette_album,
     artiste: "Pauline Defize Martos",
     titre: "Ombre et Lumière",
-    style: "Musique de film, méditative, instrumental, chanson",
+    style: "Musique de film, Méditatif, Instrumental, Chanson",
     morceaux: [
       { titre: "Neige éternelle", fichier: neige_eternelle },
       { titre: "Opus 100", fichier: opus_100 },
@@ -31,8 +31,8 @@ function Musiques() {
       { titre: "Ombre et Lumière", fichier: ombre_lumiere },
       { titre: "Horizon", fichier: horizon },
       { titre: "Voir en soi", fichier: voir_en_soi },
-      { titre: "Vérité", fichier: verite },
       { titre: "Ensemble", fichier: ensemble },
+      { titre: "Vérité", fichier: verite },
     ]
   }
 
@@ -55,9 +55,9 @@ function Musiques() {
         <div className={`flex flex-row items-center bg-gray-900 w-max rounded-2xl shadow-amber-900 shadow-lg m-10 gap-6 transition-all duration-700 ${cardVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-52"}`} ref={cardRef}>
           <img className="aspect-square object-cover rounded-xl max-w-lg" src={OmbreetLumiere.image} alt="Pauline au piano album" />
           <div className="flex flex-col gap-2 p-5">
-            <p className="font-musique2 text-xl text-white">Artiste: <span className="text-amber-400">{OmbreetLumiere.artiste}</span></p>
-            <p className="font-musique2 text-xl text-white">Titre: <span className="text-amber-400">{OmbreetLumiere.titre}</span></p>
-            <p className="font-musique2 text-xl text-white">Style: <span className="text-amber-400">{OmbreetLumiere.style}</span></p>
+            <p className="font-musique2 text-xl text-white">Artiste : <span className="text-amber-400">{OmbreetLumiere.artiste}</span></p>
+            <p className="font-musique2 text-xl text-white">Titre : <span className="text-amber-400">{OmbreetLumiere.titre}</span></p>
+            <p className="font-musique2 text-xl text-white">Style : <span className="text-amber-400">{OmbreetLumiere.style}</span></p>
             {OmbreetLumiere.morceaux.map((morceau, index) => (
               <div
                 key={index}
@@ -88,6 +88,10 @@ function Musiques() {
               />
           </div>
         </div>
+      <div className="flex flex-col justify-center items-left  bg-gray-900 shadow-amber-900 shadow-lg rounded-2xl w-4xl p-6 m-6">
+        <p className="font-musique2 text-2xl text-white">Enregistrement et mixage : <span className="text-amber-400">Guillaume Thevenin et Flavien Popin, Cryogène Studios </span></p>
+        <p className="font-musique2 text-2xl text-white">Photographie : <span className="text-amber-400">Pascal Calmettes </span></p>
+      </div>
       </div>
     </section>
   )

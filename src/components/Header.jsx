@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom"
 function Header() {
   const location = useLocation()
   const surAccueil = location.pathname === "/"
+  const surBiographie = location.pathname === "/biographie"
   const [menuOuvert, setMenuOuvert] = useState(false)
   const [aspectScrolle, setAspectScrolle] = useState(false)
 
@@ -18,7 +19,7 @@ function Header() {
   }, [])
 
     return(
-        <header className={`top-0 left-0 w-full fixed py-3 px-6 z-50 transition ${surAccueil && !aspectScrolle ? "bg-transparent" : "bg-nuit"}`}>
+        <header className={`top-0 left-0 w-full fixed py-3 px-6 z-50 transition ${surAccueil && !aspectScrolle ? "bg-transparent" : "bg-nuit"} ${surBiographie ? "bg-transparent" : "bg-nuit"}`}>
           {/* Nom de l'artiste à gauche */}
           <div className="flex justify-between items-center">
             <Link to={"/"}>
