@@ -11,15 +11,17 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setAspectScrolle(window.scrollY > window.innerHeight - 80)
+      const hero = document.getElementById("hero")
+      const hauteurHero = hero ? hero.offsetHeight : 0
+      setAspectScrolle(window.scrollY > hauteurHero - 80)
     }
     window.addEventListener("scroll", handleScroll)
 
-    return () => window.removeEventListener("scroll", handleScroll)  // ← le nettoyage
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
     return(
-        <header className={`top-0 left-0 w-full fixed py-3 px-6 z-50 transition ${surAccueil && !aspectScrolle ? "bg-transparent" : "bg-nuit"} ${surBiographie ? "bg-transparent" : "bg-nuit"}`}>
+        <header className={`top-0 left-0 w-full fixed py-3 px-6 z-50 transition ${surAccueil && !aspectScrolle ? "bg-transparent" : "bg-nuit"} ${surBiographie ? "bg-nuit lg:bg-transparent" : "bg-nuit"}`}>
           {/* Nom de l'artiste à gauche */}
           <div className="flex justify-between items-center">
             <Link to={"/"}>
@@ -28,7 +30,7 @@ function Header() {
 
             {menuOuvert &&(
               // Lien des pages
-              <ul className="flex gap-6 text-white text-2xl font-subtitle2 font-light">
+              <ul className="flex flex-col lg:flex-row gap-6 text-white text-2xl font-subtitle2 font-light absolute lg:static top-full left-0 w-full lg:w-auto bg-nuit lg:bg-transparent p-6 lg:p-0 items-center max-h-[calc(100vh-80px)] overflow-y-auto lg:max-h-none lg:overflow-visible">
                 <li className="hover:scale-110 transition"><Link to="/">ACCUEIL</Link></li>
                 <li className="hover:scale-110 transition"><Link to="/biographie">BIOGRAPHIE</Link></li>
                 <li className="hover:scale-110 transition"><Link to="/musiques">MUSIQUES</Link></li>

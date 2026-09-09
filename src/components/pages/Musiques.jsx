@@ -51,17 +51,17 @@ function Musiques() {
     <section 
       className="bg-linear-to-b from-fond to-nuit pt-36 pb-36">
       <div className="flex flex-col justify-center items-center m-6">
-        <h1 className="font-musique2 text-4xl text-white">Album : <span className="text-amber-400">{OmbreetLumiere.titre}</span></h1>
+        <h1 className="font-musique2 text-xl lg:text-4xl text-white">Album : <span className="text-amber-400">{OmbreetLumiere.titre}</span></h1>
 
         {/* Card de l'album */}
-        <div className={`flex flex-row items-center bg-gray-900 w-max rounded-2xl shadow-amber-900 shadow-lg m-10 gap-6 transition-all duration-700 ${cardVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-52"}`} ref={cardRef}>
+        <div className={`flex flex-col lg:flex-row items-center bg-gray-900 max-w-4xl rounded-2xl shadow-amber-900 shadow-lg m-3 lg:m-10 gap-6 transition-all duration-700 ${cardVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-52"}`} ref={cardRef}>
           {/* Image de l'album */}
-          <img className="aspect-square object-cover rounded-xl max-w-lg" src={OmbreetLumiere.image} alt="Pauline au piano album" />
+          <img className="aspect-square object-cover rounded-xl w-full max-w-xs lg:max-w-lg" src={OmbreetLumiere.image} alt="Pauline au piano album" />
           {/* Informations de l'album */}
           <div className="flex flex-col gap-2 p-5">
-            <p className="font-musique2 text-xl text-white">Artiste : <span className="text-amber-400">{OmbreetLumiere.artiste}</span></p>
-            <p className="font-musique2 text-xl text-white">Titre : <span className="text-amber-400">{OmbreetLumiere.titre}</span></p>
-            <p className="font-musique2 text-xl text-white">Style : <span className="text-amber-400">{OmbreetLumiere.style}</span></p>
+            <p className="font-musique2 text-md lg:text-xl text-white">Artiste : <span className="text-amber-400">{OmbreetLumiere.artiste}</span></p>
+            <p className="font-musique2 text-md lg:text-xl text-white">Titre : <span className="text-amber-400">{OmbreetLumiere.titre}</span></p>
+            <p className="font-musique2 text-md lg:text-xl text-white">Style : <span className="text-amber-400">{OmbreetLumiere.style}</span></p>
             {OmbreetLumiere.morceaux.map((morceau, index) => (
               <div
                 key={index}
@@ -71,7 +71,7 @@ function Musiques() {
                 {selectionMorceaux === index && enLecture
                   ? <Pause className="hover:scale-115 transition"size={20} fill="#f59e0b" color="#f59e0b" />
                   : <Play className="hover:scale-115 transition" size={20} fill="#f59e0b" color="#f59e0b" />}
-                <p className="font-musique2 text-xl text-white hover:scale-105 transition">{morceau.titre}</p>
+                <p className="font-musique2 text-md lg:text-xl text-white hover:scale-105 transition">{morceau.titre}</p>
               </div>  
             ))}
             <WavesurferPlayer
@@ -93,9 +93,9 @@ function Musiques() {
           </div>
         </div>
       {/* Informations de l'album */}
-      <div className="flex flex-col justify-center items-left  bg-gray-900 shadow-amber-900 shadow-lg rounded-2xl w-4xl p-6 m-6">
-        <p className="font-musique2 text-2xl text-white">Enregistrement et mixage : <span className="text-amber-400">Guillaume Thevenin et Flavien Popin, Cryogène Studios </span></p>
-        <p className="font-musique2 text-2xl text-white">Photographie : <span className="text-amber-400">Pascal Calmettes </span></p>
+      <div className={`flex flex-col justify-center items-start bg-gray-900 shadow-amber-900 shadow-lg rounded-2xl w-full max-w-4xl p-6 m-6transition-all duration-700 ${cardVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-52"}`} ref={cardRef}>
+        <p className="font-musique2 text-md lg:text-2xl text-white">Enregistrement et mixage : <span className="text-amber-400">Guillaume Thevenin et Flavien Popin, Cryogène Studios </span></p>
+        <p className="font-musique2 text-md lg:text-2xl text-white">Photographie : <span className="text-amber-400">Pascal Calmettes </span></p>
       </div>
       </div>
     </section>

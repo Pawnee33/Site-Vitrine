@@ -7,7 +7,7 @@ function Video() {
 
   const videos = [
     { id: "XF_Xh-nsLlM", titre: "Ombre et Lumière - Neige éternelle" },
-    { id: "f2GA7VPGDGU", titre: "Ombre et Lumière - Voir en soi" },
+    { id: "Lrn4XKBh0VQ", titre: "Ombre et Lumière - Voir en soi" },
     { id: "CIGiA0M3zPs", titre: "Ombre et Lumière - Ensemble" },
     { id: "F3RW3mtiaKI", titre: "Concert Pauline Defize Martos à l'Impromptu" },
     { id: "9X9u86gMyhk", titre: "Pauline Defize Martos Live Bordeaux" },
@@ -16,14 +16,14 @@ function Video() {
   return (
     <section className="pt-28 pb-16">
       <div
-        className={`grid grid-cols-2 gap-10 justify-center items-center m-20 px-72 transition-all duration-700 ${videoVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-24"}`}
+        className={`grid grid-cols-1 md:grid-cols-2 justify-items-center gap-10 p-6 md:p-10 lg:px-72 transition-all duration-700 ${videoVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-24"}`}
         ref={videoRef}
       >
         {/* Card des vidéos */}
         {videos.map((video) => (
           <div
             key={video.id}
-            className="group max-w-xl rounded relative mx-auto h-auto overflow-hidden cursor-pointer "
+            className="group w-full max-w-xl rounded relative  overflow-hidden cursor-pointer "
             onClick={() => setVideoOuverte(video)}
           >
             <img
@@ -55,7 +55,7 @@ function Video() {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
             onClick={(e) => e.stopPropagation()}
-            className="max-w-[90vw] max-h-[80vh]"
+            className="max-w-[90vw] max-h-[90vh]"
           ></iframe>
           <p className="font-lien font-bold text-white text-xl">{videoOuverte.titre}</p>
         </div>

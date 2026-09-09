@@ -7,16 +7,16 @@ function Cours() {
   const [ lunaRef, lunaVisible ] = useOnScreen()
   const [ lisaRef, lisaVisible ] = useOnScreen()
   return (
-    <section className="pt-24">
-      <div className="flex flex-row justify-center items-center m-6 gap-6">
+    <section className="pt-24 overflow-x-hidden">
+      <div className="flex flex-col lg:flex-row justify-center items-center m-3 lg:m-6 gap-6">
         {/* Image des cours */}
-        <img className={`max-w-sm object-contain rounded-2xl transition-all duration-700 ${lisaVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-52"}`} ref={lisaRef} src={Lisa_Pauline} alt="Pauine entrain de donner des cours de piano"/>
-        <img className={`max-w-sm object-contain rounded-2xl transition-all duration-700 ${lunaVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-52"}`} ref={lunaRef} src={Luna_Pauline} alt="Pauine entrain de donner des cours de piano"/>
-        <div className={`bg-white rounded-2xl py-10 px-12  transition-all duration-700 ${cardVisible ? "opacity-100 -translate-x-0" : "opacity-0 translate-x-52"}`} ref={cardRef}>
+        <img className={`max-w-xs lg:max-w-sm object-contain rounded-2xl transition-all duration-700 ${lisaVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-52"}`} ref={lisaRef} src={Lisa_Pauline} alt="Pauine entrain de donner des cours de piano"/>
+        <img className={`max-w-xs lg:max-w-sm object-contain rounded-2xl transition-all duration-700 ${lunaVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-52"}`} ref={lunaRef} src={Luna_Pauline} alt="Pauine entrain de donner des cours de piano"/>
+        <div className={`bg-white rounded-2xl py-5 px-6 lg:py-10 lg:px-12  transition-all duration-700 ${cardVisible ? "opacity-100 -translate-x-0" : "opacity-0 translate-x-52"}`} ref={cardRef}>
           <div className="flex flex-col gap-6">
-            <h1 className="text-5xl text-black  font-musique2">Enseignante Piano / Pédagogie</h1>
+            <h1 className="text-xl lg:text-5xl text-black  font-musique2">Enseignante Piano / Pédagogie</h1>
             {/* Card texte des cours */}
-            <div className="max-w-5xl flex flex-col gap-4 text-black text-xl font-lien">
+            <div className="max-w-sm lg:max-w-5xl flex flex-col gap-4 text-black text-sm lg:text-xl font-lien">
               <p>
                 Pauline Defize Martos
               </p>

@@ -141,7 +141,7 @@ function Concerts() {
     <section className="pt-24">
       {/* Section où il y aura les événements à venir */}
       <div className="flex flex-col m-6">
-        <h1 className="font-musique2 text-4xl">Événements à venir :</h1>
+        <h1 className="font-musique2 text-2xl lg:text-4xl">Événements à venir :</h1>
         <p className="m-3">D’autres représentations à venir bientôt, restez à l’écoute !</p>
       </div>
       {/* Carrousel d'articles */}

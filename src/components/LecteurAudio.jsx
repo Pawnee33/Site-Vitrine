@@ -49,26 +49,26 @@ function LecteurAudio() {
           </button>
         </div>
 
-        <div className={`flex flex-row items-center m-2 gap-4 ${afficheLecteur ? "" : "hidden"}`}>
+        <div className={`flex flex-row items-center m-2 lg:gap-4 ${afficheLecteur ? "" : "hidden"}`}>
 
           {/* pochette d'Album */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center lg:gap-4">
             <img className="aspect-square object-cover w-20" src={pochette_album} alt="Pauline au piano album" />
 
             {/* Titre de l'album et des musiques */}
             <div className="flex flex-col">
-              <p className="text-white text-2xl font-musique2 font-semibold w-64 truncate px-3">Ombre & Lumière</p>
-              <p className="text-white/80 text-xl font-musique2 font-light w-64 truncate px-3">{playlist[indexStart].titre}</p>
+              <p className="text-white text-base lg:text-2xl font-musique2 font-semibold w-64 truncate px-3">Ombre & Lumière</p>
+              <p className="text-white/80 text-sm lg:text-xl font-musique2 font-light w-64 truncate px-3">{playlist[indexStart].titre}</p>
             </div>
           </div>
 
           {/* Boutons Play, Pause, Précédent et suivant */}
-          <div className="flex items-center gap-4">
-            <button className="text-white" onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}><SkipBack fill="white" color="white" size={32}/></button>
+          <div className="flex items-center gap-1 lg:gap-4">
+            <button className="text-white" onClick={() => setIndexStart((indexStart - 1 + playlist.length) % playlist.length)}><SkipBack fill="white" color="white" className="w-6 h-6 lg:w-8 lg:h-8"/></button>
             <button className="text-white" onClick={() => wavesurfer && wavesurfer.playPause()}>
-              {enLecture ? <Pause fill="white" color="white" size={36}/> : <Play fill="white" color="white" size={36}/>}
+              {enLecture ? <Pause fill="white" color="white" className="w-7 h-7 lg:w-9 lg:h-9"/> : <Play fill="white" color="white" className="w-7 h-7 lg:w-9 lg:h-9"/>}
             </button>
-            <button onClick={() => setIndexStart((indexStart + 1) % playlist.length)}><SkipForward fill="white" color="white" size={32}/></button>
+            <button onClick={() => setIndexStart((indexStart + 1) % playlist.length)}><SkipForward fill="white" color="white" className="w-6 h-6 lg:w-8 lg:h-8"/></button>
           </div>
 
           {/* Onde de la lecture audio avec WavesurferPlayer */}
