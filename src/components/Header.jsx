@@ -15,6 +15,8 @@ function Header() {
       const hauteurHero = hero ? hero.offsetHeight : 0
       setAspectScrolle(window.scrollY > hauteurHero - 80)
     }
+
+    handleScroll()
     window.addEventListener("scroll", handleScroll)
 
     return () => window.removeEventListener("scroll", handleScroll)
