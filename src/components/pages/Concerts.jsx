@@ -4,7 +4,9 @@ import Article_3 from "../../assets/images/projet-artistique-1.jpg"
 import Article_4 from "../../assets/images/articles-piano-2.jpg"
 import Article_5 from "../../assets/images/articles-piano-3.jpg"
 import Article_6 from "../../assets/images/articles_piano_1.jpg"
-import Concert_10 from "../../assets/images/affiches-piano_2.jpg"
+import Concert_12 from "../../assets/images/jeunestalents.jpg"
+import Concert_11 from "../../assets/images/affiches-piano_2.jpg"
+import Concert_10 from "../../assets/images/concert_auzone.jpg"
 import Concert_9 from "../../assets/images/affiche-20-Mai.jpg"
 import Concert_8 from "../../assets/images/concert_1.jpg"
 import Concert_7 from "../../assets/images/concert-11-Juin.jpg"
@@ -131,9 +133,23 @@ function Concerts() {
     {
       id: 10,
       image: Concert_10,
+      date: "11 Mai 2017 à Bordeaux",
+      titre: "Concert de Piano Station Ausone",
+      extrait: "Dans le cadre de leurs études au PESMD Bordeaux Aquitaine, Pauline Martos et Alice Laguerre se produiront en solistes. Au programme \: Bach, Chopin, Schubert, Beethoven et Ginastera.",
+    },
+    {
+      id: 11,
+      image: Concert_11,
       date: "Pêle-Mêle",
       titre: "Projet artistique",
       extrait: "Programmation de concerts et évènments année 2017.",
+    },
+    {
+      id: 12,
+      image: Concert_12,
+      date: "5 février 2011 à Bordeaux",
+      titre: "Concert jeunes talents",
+      extrait: "Ce concert jeunes talents est dédié à de jeunes pianistes et harpistes venant de France, Suisse et Italie.",
     },
   ]
 
