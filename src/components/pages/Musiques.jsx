@@ -26,7 +26,7 @@ function Musiques() {
     style: "Musique de film, Méditatif, Instrumental, Chanson",
     morceaux: [
       { titre: "Neige éternelle", fichier: neige_eternelle },
-      { titre: "Opus 100", fichier: opus_100 },
+      { titre: "Opus 20 n°100", fichier: opus_100 },
       { titre: "Croire", fichier: croire },
       { titre: "Ombre et Lumière", fichier: ombre_lumiere },
       { titre: "Horizon", fichier: horizon },

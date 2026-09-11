@@ -11,8 +11,8 @@ function Accroche() {
     return(
       <section>
         {/* Phrase d'accroche et ornement */}
-        <div className="flex flex-col items-center bg-sky-050 h-20 lg:h-72 gap-2 lg:gap-6">
-            <p className={`font-cursive font-normal text-black text-sm lg:text-5xl mt-6 lg:mt-24 transition-all duration-700 ${accrocheVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-52"}`} ref={accrocheRef}>Entre Ombre & Lumière, là où mes paroles s'arrêtent, ma musique continue de vivre.</p>
+        <div className="flex flex-col items-center bg-sky-050 m-1 h-28 lg:h-72 gap-2 lg:gap-6">
+            <p className={`font-cursive font-semibold lg:font-normal text-black text-sm lg:text-5xl mt-10 lg:mt-24 transition-all duration-700 ${accrocheVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-52"}`} ref={accrocheRef}>Entre Ombre & Lumière, là où mes paroles s'arrêtent, ma musique continue de vivre.</p>
             <img className={`w-40 lg:w-96 transition-all duration-700 ${ornementVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-24"}`} ref={ornementRef} src={ligne_ornement}  alt="ornement décoratif" />
         </div>
 

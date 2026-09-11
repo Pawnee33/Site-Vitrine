@@ -6,8 +6,8 @@ function Biographie() {
   return (
     <section className="relative overflow-x-hidden">
       {/* Image de la biographie */}
-    <img className="w-full h-full object-contain" src={Pauline_Bio} />
-    <div className={`static lg:absolute lg:top-30 lg:left-16 bg-gray-400/30 rounded-2xl shadow-[-50px_50px_10px_rgba(0,0,0,0.40)] py-6 px-6 lg:py-10 lg:px-12 m-4 lg:m-0 transition-all duration-700 ${cardVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-52"}`} ref={cardRef}>
+    <img id="hero-bio" className="w-full h-full object-contain" src={Pauline_Bio} />
+    <div className={`static lg:absolute lg:top-30 lg:left-16 bg-white lg:bg-gray-400/30 rounded-2xl lg:shadow-[-50px_50px_10px_rgba(0,0,0,0.40)] py-6 px-6 lg:py-10 lg:px-12 m-4 lg:m-0 transition-all duration-700 ${cardVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-52"}`} ref={cardRef}>
     <div className="flex flex-col bg-white lg:bg-transparent gap-6">
       <h1 className="text-xl lg:text-5xl text-black lg:text-white  font-musique2">Biographie</h1>
       {/* Card texte de la biographie */}

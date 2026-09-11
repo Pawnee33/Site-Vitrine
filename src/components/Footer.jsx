@@ -46,6 +46,9 @@ function Footer() {
         <div>
           <p className="font-subtitle text-xs lg:text-sm">&copy; 2026 Pauline Defize Martos</p>
         </div>
+      <div>
+          <p className="font-subtitle text-xs lg:text-sm">Ce site a été conçu par Pawnee DEFIZE</p>
+      </div>
       </div>
     </footer>
   )

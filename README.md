@@ -1,16 +1,65 @@
-# React + Vite
+# Site vitrine : Pauline Defize Martos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site vitrine de Pauline Defize Martos, pianiste et compositrice.
+Il présente sa biographie, ses musiques, ses vidéos, ses concerts et son activité
+d'enseignement, et permet de la contacter pour des réservations.
 
-Currently, two official plugins are available:
+🔗 **En ligne :** [pauline-defize-martos.vercel.app](https://pauline-defize-martos.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Fonctionnalités
 
-## React Compiler
+- **Accueil** : image plein cadre, vidéo de fond, header transparent qui se colore au scroll
+- **Biographie** : parcours de l'artiste
+- **Musiques** : lecteur audio intégré (WaveSurfer.js) avec sélection des morceaux
+- **Vidéos** : galerie de clips YouTube, ouverture en grand au clic (modale)
+- **Concerts** : événements à venir et passés en carrousel
+- **Cours** : présentation de l'activité d'enseignement
+- **Contact** : pour les demandes de réservation
+- Lecteur audio persistant en bas de page, sur toutes les pages
+- Entièrement responsive (mobile, tablette, ordinateur)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies
 
-## Expanding the ESLint configuration
+- **React 19** + **Vite**
+- **Tailwind CSS v4**
+- **React Router** (`react-router-dom`) : navigation entre les pages
+- **WaveSurfer.js** (`@wavesurfer/react`) : lecteur audio avec forme d'onde
+- **lucide-react** : icônes
+- Déployé sur **Vercel**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation et lancement en local
+
+Prérequis : [Node.js](https://nodejs.org) (version 20 ou plus).
+
+```bash
+# 1. Cloner le dépôt
+git clone https://github.com/Pawnee33/Site-Vitrine.git
+cd Site-Vitrine
+
+# 2. Installer les dépendances
+npm install
+
+# 3. Lancer le serveur de développement
+npm run dev
+```
+
+Le site est alors accessible sur `http://localhost:5173` (l'adresse s'affiche dans le terminal).
+
+## Autres commandes
+
+```bash
+npm run build     # construit la version de production (dossier dist/)
+npm run preview   # prévisualise la version de production en local
+```
+
+## Déploiement
+
+Le site est hébergé sur Vercel. Chaque `git push` sur la branche `main` déclenche
+automatiquement un nouveau déploiement.
+
+Le fichier `vercel.json` redirige toutes les routes vers `index.html`, ce qui est
+nécessaire pour que React Router fonctionne en accès direct sur une sous-page.
+
+## Auteur
+
+Développé par **Pawnee DEFIZE** : [github.com/Pawnee33](https://github.com/Pawnee33)

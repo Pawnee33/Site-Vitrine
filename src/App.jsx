@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import ScrollToTop from "./components/ScrollToTop"
 import Header from "./components/Header"
 import LecteurAudio from "./components/LecteurAudio"
 import Accueil from "./components/pages/Accueil"
@@ -13,6 +14,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Accueil />} />

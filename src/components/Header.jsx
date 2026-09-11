@@ -11,7 +11,7 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const hero = document.getElementById("hero")
+      const hero = document.getElementById("hero") || document.getElementById("hero-bio")
       const hauteurHero = hero ? hero.offsetHeight : 0
       setAspectScrolle(window.scrollY > hauteurHero - 80)
     }
@@ -23,7 +23,7 @@ function Header() {
   }, [])
 
     return(
-        <header className={`top-0 left-0 w-full fixed py-3 px-6 z-50 transition ${surAccueil && !aspectScrolle ? "bg-transparent" : "bg-nuit"} ${surBiographie ? "bg-nuit lg:bg-transparent" : "bg-nuit"}`}>
+        <header className={`top-0 left-0 w-full fixed py-3 px-6 z-50 transition ${(surAccueil || surBiographie) && !aspectScrolle ? "bg-transparent" : "bg-nuit"}`}>
           {/* Nom de l'artiste à gauche */}
           <div className="flex justify-between items-center">
             <Link to={"/"}>
@@ -33,13 +33,13 @@ function Header() {
             {menuOuvert &&(
               // Lien des pages
               <ul className="flex flex-col lg:flex-row gap-6 text-white text-2xl font-subtitle2 font-light absolute lg:static top-full left-0 w-full lg:w-auto bg-nuit lg:bg-transparent p-6 lg:p-0 items-center max-h-[calc(100vh-80px)] overflow-y-auto lg:max-h-none lg:overflow-visible">
-                <li className="hover:scale-110 transition"><Link to="/">ACCUEIL</Link></li>
-                <li className="hover:scale-110 transition"><Link to="/biographie">BIOGRAPHIE</Link></li>
-                <li className="hover:scale-110 transition"><Link to="/musiques">MUSIQUES</Link></li>
-                <li className="hover:scale-110 transition"><Link to="/videos">VIDÉOS</Link></li>
-                <li className="hover:scale-110 transition"><Link to="/concerts">CONCERTS</Link></li>
-                <li className="hover:scale-110 transition"><Link to="/cours">COURS</Link></li>
-                <li className="hover:scale-110 transition"><Link to="/contact">CONTACT</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/" onClick={() => setMenuOuvert(false)}>ACCUEIL</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/biographie" onClick={() => setMenuOuvert(false)}>BIOGRAPHIE</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/musiques" onClick={() => setMenuOuvert(false)}>MUSIQUES</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/videos" onClick={() => setMenuOuvert(false)}>VIDÉOS</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/concerts" onClick={() => setMenuOuvert(false)}>CONCERTS</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/cours" onClick={() => setMenuOuvert(false)}>COURS</Link></li>
+                <li className="hover:scale-110 transition"><Link to="/contact" onClick={() => setMenuOuvert(false)}>CONTACT</Link></li>
               </ul>
             )}
 
