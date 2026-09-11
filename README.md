@@ -17,6 +17,7 @@ d'enseignement, et permet de la contacter pour des réservations.
 - **Contact** : pour les demandes de réservation
 - Lecteur audio persistant en bas de page, sur toutes les pages
 - Entièrement responsive (mobile, tablette, ordinateur)
+- **Installable comme une application (PWA)** : icône sur l'écran d'accueil du téléphone
 
 ## Technologies
 
@@ -25,6 +26,7 @@ d'enseignement, et permet de la contacter pour des réservations.
 - **React Router** (`react-router-dom`) : navigation entre les pages
 - **WaveSurfer.js** (`@wavesurfer/react`) : lecteur audio avec forme d'onde
 - **lucide-react** : icônes
+- **vite-plugin-pwa** : transforme le site en application installable
 - Déployé sur **Vercel**
 
 ## Installation et lancement en local
@@ -43,7 +45,7 @@ npm install
 npm run dev
 ```
 
-Le site est alors accessible sur `http://localhost:5173` (l'adresse s'affiche dans le terminal).
+Le site est alors accessible sur `http://localhost:5417` (l'adresse s'affiche dans le terminal).
 
 ## Autres commandes
 
@@ -51,6 +53,19 @@ Le site est alors accessible sur `http://localhost:5173` (l'adresse s'affiche da
 npm run build     # construit la version de production (dossier dist/)
 npm run preview   # prévisualise la version de production en local
 ```
+
+## PWA (application installable)
+
+Le site est une Progressive Web App : il peut être ajouté à l'écran d'accueil d'un
+téléphone et s'ouvre alors en plein écran, comme une application.
+
+- **Android (Chrome)** : menu ⋮ → « Installer l'application ».
+- **iPhone (Safari)** : bouton Partager → « Sur l'écran d'accueil ».
+
+La configuration se trouve dans `vite.config.js` (plugin `vite-plugin-pwa`), et les icônes
+de l'application sont dans le dossier `public/` (`pwa-192x192.png`, `pwa-512x512.png`,
+`apple-touch-icon.png`). La PWA n'est active qu'en version de production (`npm run build`),
+pas en mode développement.
 
 ## Déploiement
 
